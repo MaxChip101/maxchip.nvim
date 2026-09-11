@@ -1,18 +1,18 @@
 return {
     servers = {
-	'clangd',
+        'clangd',
         'gopls',
-	'pyright',
+        'pyright',
         'zls',
         'rust_analyzer',
-	'nixd',
-	'lua_ls',
+        'nixd',
+        'lua_ls',
     },
     formatters = {
-	lua = { "stylua" },
-	python = { "black" },
-	go = { "gofmt" },
-	rust = { "rustfmt" },
+        lua = { "stylua" },
+        python = { "black" },
+        go = { "gofmt" },
+        rust = { "rustfmt" },
         zig = { "zigfmt" },
     },
 }
