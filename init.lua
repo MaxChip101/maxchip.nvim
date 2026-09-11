@@ -2,6 +2,7 @@ require("maxchip.settings")
 require("maxchip.keybinds")
 require("maxchip.lazy")
 
+local languages = require("maxchip.languages") -- lanuage specific lsps & fmts
 
 -- Lua
 --lspconfig.lua_ls.setup({
@@ -17,15 +18,15 @@ require("maxchip.lazy")
 --    },
 --})
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if ok then
+    capabilities = cmp_nvim_lsp.default_capabilities()
+end
+
 vim.lsp.config('*', {
     root_markers = { '.git' },
+    capabilities = capabilities
 })
 
-vim.lsp.enable({
-    'gopls',
-    'pyright',
-    'zls',
-    'rust_analyzer',
-    'nixd',
-    'lua_ls',
-})
+vim.lsp.enable(languages.servers)
