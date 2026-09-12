@@ -27,3 +27,7 @@ environment.systemPackages = with pkgs; [
     rustfmt
     zig_0_16
 ];
+
+fonts.packages = with pkgs; [
+    nerd-fonts/jetbrains-mono
+];

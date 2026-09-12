@@ -24,9 +24,27 @@ if ok then
     capabilities = cmp_nvim_lsp.default_capabilities()
 end
 
-vim.lsp.config('*', {
-    root_markers = { '.git' },
-    capabilities = capabilities
+vim.lsp.config("*", {
+    root_markers = { ".git" },
+    capabilities = capabilities,
+})
+
+-- lua lsp globals
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim", "hl" },
+            },
+            workspace = {
+                library = {
+                    vim.api.nvim_get_runtime_file("", true),
+                    vim.fn.expand("~/.config/hypr"),
+                },
+                checkThirdParty = false,
+            },
+        },
+    },
 })
 
 vim.lsp.enable(languages.servers)
