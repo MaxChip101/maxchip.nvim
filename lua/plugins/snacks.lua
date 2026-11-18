@@ -21,7 +21,7 @@ return {
             enabled = true,
             win = {
                 position = "bottom",
-                height = 0.25,
+                height = 0.3,
                 relative = "win",
             },
         },
@@ -31,6 +31,11 @@ return {
             sources = {
                 explorer = {
                     auto_close = false,
+                    layout = {
+                        layout = {
+                            width = 30,
+                        },
+                    },
                     win = {
                         list = {
                             keys = {
