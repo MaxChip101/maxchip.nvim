@@ -8,6 +8,7 @@ return {
         "nixd",
         "lua_ls",
         "hyprls",
+        "vscode-html-language-server",
     },
     formatters = {
         lua = { "stylua" },

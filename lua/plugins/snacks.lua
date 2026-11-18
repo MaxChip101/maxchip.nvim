@@ -1,0 +1,64 @@
+return {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+
+    opts = {
+        bigfile = { enabled = true },
+        dashboard = { enabled = true },
+        explorer = { enabled = true },
+        indent = { enabled = true },
+        input = { enabled = true },
+        image = { enabled = true },
+        notifier = { enabled = true },
+        quickfile = { enabled = true },
+        scope = { enabled = true },
+        scroll = { enabled = true },
+        statuscolumn = { enabled = true },
+        words = { enabled = true },
+
+        terminal = {
+            enabled = true,
+            win = {
+                position = "bottom",
+                height = 0.25, -- Takes up 25% of the screen height
+            },
+        },
+
+        picker = {
+            enabled = true,
+            sources = {
+                explorer = {
+                    auto_close = false,
+                    win = {
+                        list = {
+                            keys = {
+                                ["q"] = false, -- Only hide via <leader>b
+                                ["%"] = "explorer_add",
+                                ["D"] = "explorer_del",
+                                ["R"] = "explorer_rename",
+                            },
+                        },
+                    },
+                },
+            },
+        },
+    },
+    keys = {
+        {
+            "<leader>b",
+            function()
+                Snacks.explorer()
+            end,
+            desc = "Toggle File Explorer",
+        },
+        {
+            "<leader>t",
+            function()
+                Snacks.terminal("fish")
+            end,
+            mode = { "n", "t" },
+            desc = "Toggle Terminal",
+        },
+    },
+}
