@@ -29,6 +29,8 @@
           wl-clipboard
           xclip
 
+          fish
+
           clang-tools
           gopls
           pyright
