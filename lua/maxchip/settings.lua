@@ -7,6 +7,11 @@ vim.opt.softtabstop = 4
 vim.opt.wrap = false
 vim.opt.expandtab = true
 
+vim.opt.scrolloff = 99
+
+vim.opt.sidescrolloff = 999
+vim.opt.sidescroll = 1
+
 -- gets in the way a bit, maybe a different kind of implementation
 --vim.opt.colorcolumn = "120"
 

@@ -25,6 +25,7 @@
           curl
           ripgrep
           fd
+          imagemagick
 
           wl-clipboard
           xclip
