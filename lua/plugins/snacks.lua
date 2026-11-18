@@ -21,7 +21,8 @@ return {
             enabled = true,
             win = {
                 position = "bottom",
-                height = 0.25, -- Takes up 25% of the screen height
+                height = 0.25,
+                relative = "win",
             },
         },
 
@@ -33,7 +34,6 @@ return {
                     win = {
                         list = {
                             keys = {
-                                ["q"] = false, -- Only hide via <leader>b
                                 ["%"] = "explorer_add",
                                 ["D"] = "explorer_del",
                                 ["R"] = "explorer_rename",
