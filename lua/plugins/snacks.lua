@@ -64,7 +64,7 @@ return {
             function()
                 Snacks.terminal("fish")
             end,
-            mode = { "n", "t" },
+            mode = "n",
             desc = "Toggle Terminal",
         },
     },
