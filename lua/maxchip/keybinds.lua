@@ -4,6 +4,13 @@ vim.g.mapleader = " "
 -- not using netrw
 --vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
+vim.keymap.set(
+    "n",
+    "<leader>dd",
+    "<cmd>lua vim.diagnostic.open_float()<CR>",
+    { desc = "Show Diagnostic", noremap = true, silent = true }
+)
+
 vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Go to Left Window" })
 vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Go to Lower Window" })
 vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Go to Upper Window" })
