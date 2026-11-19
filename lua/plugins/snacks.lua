@@ -34,6 +34,7 @@ return {
                     hidden = true,
                     ignored = true,
                     layout = {
+                        auto_hide = { "input" },
                         layout = {
                             width = 30,
                         },
