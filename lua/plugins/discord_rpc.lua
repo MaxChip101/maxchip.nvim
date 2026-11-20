@@ -1,10 +1,10 @@
 return {
-    "andweeb/presence.nvim",
+    "vyfor/cord.nvim",
+    build = ":Cord update",
     lazy = false,
-    config = function()
-        local presence = require("presence")
-        presence.setup({
-            neovim_image_text = "The one True Text Editor",
-        })
-    end,
+    opts = {
+        editor = {
+            tooltip = "The one True Text Editor",
+        },
+    },
 }
